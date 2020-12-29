@@ -1,0 +1,44 @@
+.rcpForm-input {
+    background-color: white;
+    width: 100%;
+    height: 30px;
+    float:left;
+    outline: none;
+
+    
+}
+
+.rcpForm {
+    width: 35%;
+    margin-left: 32.5%;
+    margin-bottom: 5%;
+
+}
+
+.rcpForm-text {
+    float: left;
+    width: 100%;
+    height: 80px;
+    outline: none;
+}
+
+Button {
+    float: left;
+    width: 100%;
+    height: 30px;
+    outline: none;
+}
+
+.mb-3{
+    display: flex;
+    margin-bottom: 5%;
+    justify-content: center;
+    margin: 0 0 1rem 0;
+}
+
+InputGroup, FormControl {
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+
+}

@@ -1,0 +1,24 @@
+.Card {
+    background-color: white;
+    border-radius: 10px;
+    float: left;
+    padding: 15px;
+    margin: 40px;
+    height: 400px;
+    width: 350px;
+    color:black;
+    text-align: center;
+    box-shadow: 1px 1px 1px 1px #eeeeee;
+}
+
+.Card-content {
+    size: 24px;
+    height: 150px;
+    width: 100%;
+    text-align: left;
+}
+
+
+.Card-title {
+    text-decoration: underline;
+}

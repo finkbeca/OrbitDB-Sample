@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useContext} from "react";
+import RecipeCard from "./components/recipeCard/index.js";
+import recipeCard from "./components/recipeCard/index.js";
+import RecipeForm from "./components/recipeForm/index.js";
+import "./App.css";
+import "./components/recipeCard/recipeCard.css";
 
+
+export const RecipeContext = React.createContext([{}, () => {}]);
 function App() {
+  const [recipes, setRecipes] = useState([])
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div id ="App-Title">
+          <h2 > Recipe Database</h2>
+      </div> 
+
+      <RecipeContext.Provider value={[recipes, setRecipes]}>
+        <RecipeForm/>
+      </RecipeContext.Provider>
+      <div className="container">
+        
+        {recipes.map(item => ( 
+            <RecipeCard key={item.id} rec={item.input} title={item.title} />
+          ))}
+      </div>
+      
     </div>
   );
 }
